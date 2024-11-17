@@ -129,7 +129,7 @@ class AI(BaseAI):
                         tile = self.player.wizard.tile.tile_east
                     if self.player.wizard.aether > 3 :
                         
-                        self.player.wizard.cast('cast', {'spellName': "Calming Blast",'tile':self.player.opponent.wizard.tile})
+                        self.player.wizard.cast('cast', {'spellName': "Calming Blast",'tile': (Tile) self.player.opponent.wizard.tile})
 
             
                        

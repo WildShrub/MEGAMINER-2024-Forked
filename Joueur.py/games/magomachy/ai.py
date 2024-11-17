@@ -114,7 +114,7 @@ class AI(BaseAI):
         
         if self.game.current_turn == 0 or self.game.current_turn == 1 :
             self.player.choose_wizard("sustaining")
-        elif self.game.current_turn() == 2 or self.game.current_turn() == 3 :
+        elif self.game.current_turn == 2 or self.game.current_turn == 3 :
                 if self.tile.x() == 1 and self.tile.y() == 8: 
                     tile = self.player.wizard.tile.tile_east
                     tile = self.player.wizard.tile.tile_east    #get rid of the stuff like 'spellName': ?

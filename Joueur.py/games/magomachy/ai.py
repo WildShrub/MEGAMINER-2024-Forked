@@ -115,11 +115,11 @@ class AI(BaseAI):
         if self.game.current_turn == 0 or self.game.current_turn == 1 :
             self.player.choose_wizard("sustaining")
         elif self.game.current_turn == 2 or self.game.current_turn == 3 :
-                if self.game.tile.x == 1 and self.game.tile.y == 8: 
+                if self.player.wizard.tile.x == 1 and self.player.wizard.tile.y == 8: 
                     tile = self.player.wizard.tile.tile_east
                     tile = self.player.wizard.tile.tile_east    #get rid of the stuff like 'spellName': ?
                     self._run_on_server('cast', {'spellName': "Teleport",'tile': self.player.wizard.tile.tile_north.tile_north})
-                elif self.game.tile.x == 8 and self.game.tile.y == 1 :
+                elif self.player.wizard.tile.x == 8 and self.player.wizard.tile.y == 1 :
                     tile = self.player.wizard.tile.tile_west
                     tile = self.player.wizard.tile.tile_west
                     self._run_on_server('cast', {'spellName': "Teleport",'tile':self.player.wizard.tile.tile_south.tile_south})

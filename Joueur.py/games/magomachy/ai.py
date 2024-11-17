@@ -118,21 +118,21 @@ class AI(BaseAI):
                 if self.player.wizard.tile.x == 1 and self.player.wizard.tile.y == 8: 
                     tile = self.player.wizard.tile.tile_east
                     tile = self.player.wizard.tile.tile_east    #get rid of the stuff like 'spellName': ?
-                    self._run_on_server('cast', {'spellName': "Teleport",'tile': self.player.wizard.tile.tile_north.tile_north})
+                    self.player.wizard.cast('cast', {'spellName': "Teleport",'tile': self.player.wizard.tile.tile_north.tile_north})
                 elif self.player.wizard.tile.x == 8 and self.player.wizard.tile.y == 1 :
                     tile = self.player.wizard.tile.tile_west
                     tile = self.player.wizard.tile.tile_west
-                    self._run_on_server('cast', {'spellName': "Teleport",'tile':self.player.wizard.tile.tile_south.tile_south})
+                    self.player.wizard.cast('cast', {'spellName': "Teleport",'tile':self.player.wizard.tile.tile_south.tile_south})
         else :
                     if self.tile.x == 1 and self.tile.y == 8 : 
                         tile = self.player.wizard.tile.tile_east
                         tile = self.player.wizard.tile.tile_east
                     if self.player.wizard.aether > 3 :
                         
-                        self._run_on_server('cast', {'spellName': "Calming Blast",'tile':self.player.wizard.opponent.tile})
+                        self.player.wizard.cast('cast', {'spellName': "Calming Blast",'tile':self.player.wizard.opponent.tile})
 
             
-                        form = stone
+                       
         return True
         # <<-- /Creer-Merge: runTurn -->>
 

@@ -258,7 +258,7 @@ class AI(BaseAI):
         '''
         return True
         # <<-- /Creer-Merge: runTurn -->>
-
+'''
     def find_path(self, start: 'games.magomachy.tile.Tile', goal: 'games.magomachy.tile.Tile') -> List['games.magomachy.tile.Tile']:
         """A very basic path finding algorithm (Breadth First Search) that when given a starting Tile, will return a valid path to the goal Tile.
 
@@ -318,6 +318,13 @@ class AI(BaseAI):
         # if you're here, that means that there was not a path to get to where
         # you want to go; in that case, we'll just return an empty path.
         return []
+
+
+'''
+
+
+
+
 
     # <<-- Creer-Merge: functions -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
     # if you need additional functions for your AI you can add them here

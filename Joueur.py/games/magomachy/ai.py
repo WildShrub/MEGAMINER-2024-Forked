@@ -118,7 +118,7 @@ class AI(BaseAI):
                 if self.player.wizard.tile.x == 1 and self.player.wizard.tile.y == 8: 
                     tile = self.player.wizard.tile.tile_east
                     tile = self.player.wizard.tile.tile_east    #get rid of the stuff like 'spellName': ?
-                    self.player.wizard.cast('cast', {'spellName': "Teleport",'tile': self.player.wizard.tile.tile_north.tile_north})
+                    self.player.wizard.cast("Teleport",self.player.wizard.tile.tile_north.tile_north)
                 elif self.player.wizard.tile.x == 8 and self.player.wizard.tile.y == 1 :
                     tile = self.player.wizard.tile.tile_west
                     tile = self.player.wizard.tile.tile_west

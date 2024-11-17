@@ -122,14 +122,14 @@ class AI(BaseAI):
                 elif self.player.wizard.tile.x == 8 and self.player.wizard.tile.y == 1 :
                     tile = self.player.wizard.tile.tile_west
                     tile = self.player.wizard.tile.tile_west
-                    self.player.wizard.cast('cast', {'spellName': "Teleport",'tile':self.player.wizard.tile.tile_south.tile_south})
+                    self.player.wizard.cast("Teleport",self.player.wizard.tile.tile_south.tile_south)
         else :
                     if self.player.wizard.tile.x == 1 and self.player.wizard.tile.y == 8 : 
                         tile = self.player.wizard.tile.tile_east
                         tile = self.player.wizard.tile.tile_east
                     if self.player.wizard.aether > 3 :
                         
-                        self.player.wizard.cast("Calming Blast",self.player.opponent.wizard.tile)
+                        self.player.wizard.cast("Calming Blast",tile(self.player.opponent.wizard.tile))
                         
 
             

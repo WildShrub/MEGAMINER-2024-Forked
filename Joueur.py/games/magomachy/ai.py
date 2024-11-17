@@ -84,12 +84,71 @@ class AI(BaseAI):
         # Put your game logic here for Move
         return -1
         # <<-- /Creer-Merge: Move -->>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    
     def run_turn(self) -> bool:
         """This is called every time it is this AI.player's turn.
 
         Returns:
             bool: Represents if you want to end your turn. True means end your turn, False means to keep your turn going and re-call this function.
         """
+        
+        if self.game.current_turn() == 0 or self.game.current_turn() == 1  
+            self.player.choose_wizard("sustaining")
+        elif
+            if self.game.current_turn() == 2 or self.game.current_turn() = 3
+                if self.tile.x() == 1 and self.tile.y() == 8 
+                    tile = self.player.wizard.tile.tile_east
+                    tile = self.player.wizard.tile.tile_east    #get rid of the stuff like 'spellName':
+                    self._run_on_server('cast', {'spellName': spell_name,'tile': self.player.wizard.tile.tile_north.tile_north})
+                elif self.tile.x() == 8 and self.tile.y() == 1
+                    tile = self.player.wizard.tile.tile_west
+                    tile = self.player.wizard.tile.tile_west
+                    self._run_on_server('cast', {'spellName': "Teleport",'tile':self.player.wizard.tile.tile_south.tile_south})
+            else 
+                    if self.tile.x() == 1 and self.tile.y() == 8 
+                    tile = self.player.wizard.tile.tile_east
+                    tile = self.player.wizard.tile.tile_east
+                    if self.player.wizard.aether()
+                    self._run_on_server('cast', {'spellName': "Teleport",'tile': self.player.wizard.tile.tile_north.tile_north})
+                    
+                    self._run_on_server('cast', {'spellName': "Calming Blast",'tile':self.player.wizard.opponent.tile})
+                    
+                
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+        
         notChosen = True
         print("Your turn! Here's the map:")
         while(True):
@@ -191,6 +250,8 @@ class AI(BaseAI):
                 print("Command not recognized, try again")
         # <<-- Creer-Merge: runTurn -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
         # Put your game logic here for runTurn
+
+        '''
         return True
         # <<-- /Creer-Merge: runTurn -->>
 

@@ -112,7 +112,7 @@ class AI(BaseAI):
             bool: Represents if you want to end your turn. True means end your turn, False means to keep your turn going and re-call this function.
         """
         
-        if self.game.current_turn() == 0 or self.game.current_turn() == 1 :
+        if self.game.current_turn == 0 or self.game.current_turn == 1 :
             self.player.choose_wizard("sustaining")
         elif self.game.current_turn() == 2 or self.game.current_turn() == 3 :
                 if self.tile.x() == 1 and self.tile.y() == 8: 

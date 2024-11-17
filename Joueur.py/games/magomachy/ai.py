@@ -124,7 +124,7 @@ class AI(BaseAI):
                     tile = self.player.wizard.tile.tile_west
                     self.player.wizard.cast('cast', {'spellName': "Teleport",'tile':self.player.wizard.tile.tile_south.tile_south})
         else :
-                    if self.tile.x == 1 and self.tile.y == 8 : 
+                    if self.player.wizard.tile.x == 1 and self.player.wizard.tile.y == 8 : 
                         tile = self.player.wizard.tile.tile_east
                         tile = self.player.wizard.tile.tile_east
                     if self.player.wizard.aether > 3 :

@@ -256,7 +256,7 @@ class AI(BaseAI):
         # Put your game logic here for runTurn
 
         '''
-    return True
+        return True
         # <<-- /Creer-Merge: runTurn -->>
 
     def find_path(self, start: 'games.magomachy.tile.Tile', goal: 'games.magomachy.tile.Tile') -> List['games.magomachy.tile.Tile']:

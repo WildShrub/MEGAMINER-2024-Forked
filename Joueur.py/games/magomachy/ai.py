@@ -116,17 +116,13 @@ class AI(BaseAI):
             self.player.choose_wizard("sustaining")
         elif self.game.current_turn == 2 or self.game.current_turn == 3 :
                 if self.player.wizard.tile.x == 1 and self.player.wizard.tile.y == 8: 
-                    tile = self.player.wizard.tile.tile_east
-                    tile = self.player.wizard.tile.tile_east    #get rid of the stuff like 'spellName': ?
+                    self.player.wizard.move(self.player.wizard.tile.tile_east)
                     self.player.wizard.cast("Teleport",self.player.wizard.tile.tile_north.tile_north)
                 elif self.player.wizard.tile.x == 8 and self.player.wizard.tile.y == 1 :
-                    tile = self.player.wizard.tile.tile_west
-                    tile = self.player.wizard.tile.tile_west
+                    self.player.wizard.move(self.player.wizard.tile.tile_west)
                     self.player.wizard.cast("Teleport",self.player.wizard.tile.tile_south.tile_south)
         else :
-                    if self.player.wizard.tile.x == 1 and self.player.wizard.tile.y == 8 : 
-                        tile = self.player.wizard.tile.tile_east
-                        tile = self.player.wizard.tile.tile_east
+                    
                     if self.player.wizard.aether > 3 :
                         
                         self.player.wizard.cast("Calming Blast",self.player.opponent.wizard.tile)
